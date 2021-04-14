@@ -1,5 +1,5 @@
-let playerMove = "rock";
-let computerMove = "scissors";
+// let playerMove = "rock";
+// let computerMove = "scissors";
 
 // player: rock + computer: rock
 // player: rock + computer: paper
@@ -13,36 +13,43 @@ let computerMove = "scissors";
 // player: scissors + computer: paper
 // player: scissors + computer: scissors
 
-if (playerMove === "rock") {
-    if (computerMove === "rock") {
-        console.log ("draw");
+
+function getWinner (player1, player2) {
+ if (player1 === "rock") {
+    if (player2 === "rock") {
+        return 0 ;
     }
-    if (computerMove === "paper") {
-        console.log ("computer wins");
+    else if (player2 === "paper") {
+        return -1 ;
     }
-    if (computerMove === "scissors") {
-        console.log ("player wins");
+    else if (player2 === "scissors") {
+        return 1 ;
     }
-}
-if (playerMove === "paper") {
-    if (computerMove === "rock") {
-        console.log ("player wins")
+ }
+ else if (player1 === "paper") {
+    if (player2 === "rock") {
+        return 1 ;
     }
-    if (computerMove === "paper") {
-        console.log ("draw")
+    else if (player2 === "paper") {
+        return 0 ;
     }
-    if (computerMove === "scissors") {
-        console.log ("computer wins")
+    else if (player2 === "scissors") {
+        return -1 ;
     }
-}
-if (playerMove === "scissors") {
-    if (computerMove === "rock") {
-        console.log ("computer wins")
+ }
+ else if (player1 === "scissors") {
+    if (player2 === "rock") {
+        return -1 ;
     }  
-    if (computerMove === "paper") {
-        console.log ("player wins")
+    else if (player2 === "paper") {
+        return 1 ;
     }
-    if (computerMove === "scissors") {
-        console.log ("draw")
+    else if (player2 === "scissors") {
+        return 0 ;
     }
+ }
 }
+
+let result = getWinner("scissors", "paper");
+
+console.log (result)
