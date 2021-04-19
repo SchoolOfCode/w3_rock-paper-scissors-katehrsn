@@ -1,3 +1,7 @@
+let askAgain = true
+
+while(askAgain === true) {
+
 let randomNumber = Math.floor((Math.random() * 3) + 1);
 
 function computerMove() {
@@ -56,3 +60,11 @@ let result = getWinner(userInput, computerMove());
 
 alert(result)
 
+let playAgain = confirm("Do you want to play again?");
+    if (playAgain === true) {
+        askAgain = true;
+    }
+    else {
+        askAgain = false
+    }
+}
