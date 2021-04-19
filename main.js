@@ -1,6 +1,6 @@
-let askAgain = true
+let play = true;
 
-while(askAgain === true) {
+while(play === true) {
 
 let randomNumber = Math.floor((Math.random() * 3) + 1);
 
@@ -16,7 +16,7 @@ function computerMove() {
     }
 }
 
-console.log(computerMove())
+console.log(computerMove());
 
 let userInput = prompt("rock, paper, or scissors?");
 
@@ -62,9 +62,9 @@ alert(result)
 
 let playAgain = confirm("Do you want to play again?");
     if (playAgain === true) {
-        askAgain = true;
+        play = true;
     }
     else {
-        askAgain = false
+        play = false;
     }
 }
