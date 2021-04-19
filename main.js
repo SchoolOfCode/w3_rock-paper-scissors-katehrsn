@@ -14,6 +14,8 @@
 // player: scissors + computer: scissors
 
 
+let userInput = prompt("rock, paper, or scissors?")
+
 function getWinner (player1, player2) {
  if (player1 === "rock") {
     if (player2 === "rock") {
@@ -50,6 +52,6 @@ function getWinner (player1, player2) {
  }
 }
 
-let result = getWinner("scissors", "paper");
+let result = getWinner(userInput, "rock");
 
-console.log (result)
+alert(result)
