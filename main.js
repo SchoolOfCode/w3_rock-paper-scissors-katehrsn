@@ -1,20 +1,20 @@
-// let playerMove = "rock";
-// let computerMove = "scissors";
+let randomNumber = Math.floor((Math.random() * 3) + 1);
 
-// player: rock + computer: rock
-// player: rock + computer: paper
-// player: rock + computer: scissors
+function computerMove() {
+    if (randomNumber === 1) {
+        return "rock" ; 
+    }
+    else if (randomNumber === 2) {
+        return "paper" ;
+    }
+    else if (randomNumber === 3) {
+        return "scissors" ;
+    }
+}
 
-// player: paper + computer: rock
-// player: paper + computer: paper
-// player: paper + computer: scissors
+console.log(computerMove())
 
-// player: scissors + computer: rock
-// player: scissors + computer: paper
-// player: scissors + computer: scissors
-
-
-let userInput = prompt("rock, paper, or scissors?")
+let userInput = prompt("rock, paper, or scissors?");
 
 function getWinner (player1, player2) {
  if (player1 === "rock") {
@@ -52,6 +52,7 @@ function getWinner (player1, player2) {
  }
 }
 
-let result = getWinner(userInput, "rock");
+let result = getWinner(userInput, computerMove());
 
 alert(result)
+
