@@ -7,29 +7,26 @@
   </head>
   <body>
     <header>
-      <h1>Rock, Paper, Scissors</h1>
-      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora, molestias error? Excepturi, eaque quia? Quas accusamus consequatur quaerat, harum similique mollitia laudantium laborum, ullam sunt, molestias dicta dolores! Eveniet, nulla!</p>
+      <h1 id=title class=text>Rock, Paper, Scissors</h1>
     </header>
     <main>
-      <nav>
-        <button id=newGameButton>NEW GAME</button>
-      </nav>
       <form>
-        <input id=username type="text">
+        <h2 id=name class=text>What's your name?</h2>
+        <input id=username type="text" class=text>
       </form>
+      <nav>
+        <button id=newGameButton>New Game</button>
+      </nav>
       <section id=scores>
-        <p id=userScore>USER</p>
-        <p id=tieGames>TIES</p>
-        <p id=computerScore>COMPUTER</p>
+        <h2 id=scoresTitle class=text>Scores</h2>
+        <p id=userScore class=text>User: 0</p>
+        <p id=tieGames class=text>Ties: 0</p>
+        <p id=computerScore class=text>Computer: 0</p>
       </section>
-      <!-- <section id=play>
-        <img id=userPlay src= user.png>
-        <img id=computerPlay src= computer.png>
-      </section> -->
       <section id=userChoice>
-        <button id=rockButton>ROCK</button>
-        <button id=paperButton>PAPER</button>
-        <button id=scissorsButton>SCISSORS</button>
+        <button id=rockButton class=playButton>Rock</button>
+        <button id=paperButton class=playButton>Paper</button>
+        <button id=scissorsButton class=playButton>Scissors</button>
       </section>
     </main>
     <script src="./main.js"></script>

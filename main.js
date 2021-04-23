@@ -52,8 +52,8 @@ function newGame(){
     computerMove = "n/a"
     result = "n/a"
     userScore.innerText = `${capitalise(username.value)}: ${playerWins}`;
-    computerScore.innerText = `computer: ${computerWins}`
-    tieGames.innerText = `ties: ${ties}`
+    computerScore.innerText = `Computer: ${computerWins}`
+    tieGames.innerText = `Ties: ${ties}`
 
 }
 
@@ -116,11 +116,11 @@ function getScore() {
     }
     else if (result === "computer wins"){
         computerWins++;
-        computerScore.innerText = `computer: ${computerWins}`
+        computerScore.innerText = `Computer: ${computerWins}`
     }
     else if (result === "tie"){
         ties++;
-        tieGames.innerText = `ties: ${ties}`
+        tieGames.innerText = `Ties: ${ties}`
     }
 }
 
