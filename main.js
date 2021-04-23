@@ -6,6 +6,8 @@ const scissorsButton = document.querySelector("#scissorsButton");
 const userScore = document.querySelector("#userScore");
 const computerScore = document.querySelector("#computerScore");
 const tieGames = document.querySelector("#tieGames");
+const username = document.querySelector("#username");
+
 
 // Game Variables
 let computerMove = "n/a";
@@ -22,8 +24,26 @@ newGameButton.addEventListener("click", newGame);
 rockButton.addEventListener("click", userRock);
 paperButton.addEventListener("click", userPaper);
 scissorsButton.addEventListener("click", userScissors);
+username.addEventListener("input", displayUsername)
 
+// Username
+username.maxLength = 10
+
+function displayUsername(){
+    userScore.innerText = `${capitalise(username.value)}: ${playerWins}`;
+}
+
+function capitalise(word){
+    let lowerCaseWord = word.toLowerCase();
+    let upperCaseLetter = lowerCaseWord[0];
+    lowerCaseWord = lowerCaseWord.substring(1);
+    upperCaseLetter = upperCaseLetter.toUpperCase();
+    let capitaliseWord = upperCaseLetter + lowerCaseWord;
+    return capitaliseWord;
+};
+  
 // Functions
+
 function newGame(){
     playerWins = 0
     computerWins = 0
@@ -31,7 +51,7 @@ function newGame(){
     playerMove = "n/a"
     computerMove = "n/a"
     result = "n/a"
-    userScore.innerText = `user: ${playerWins}`
+    userScore.innerText = `${capitalise(username.value)}: ${playerWins}`;
     computerScore.innerText = `computer: ${computerWins}`
     tieGames.innerText = `ties: ${ties}`
 
@@ -92,7 +112,7 @@ function getWinner (player1, player2) {
 function getScore() {
     if (result === "user wins"){
         playerWins++;
-        userScore.innerText = `user: ${playerWins}`
+        userScore.innerText = `${capitalise(username.value)}: ${playerWins}`;
     }
     else if (result === "computer wins"){
         computerWins++;
