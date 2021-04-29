@@ -1,0 +1,76 @@
+body {
+    background: #c0392b;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #8e44ad, #c0392b);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #8e44ad, #c0392b); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+.text {
+    font-family: Arial, Helvetica, sans-serif;
+    color: thistle;
+
+}
+#title {
+    text-align: center;
+    font-style: italic;
+}
+form {
+    text-align: center;
+    
+}
+#name {
+    display: inline;
+    font-size: 5vh;
+    font-weight: normal;
+}
+
+#username {
+    background-color: transparent;
+    display: inline;
+    margin-left: 3%;
+    border-bottom-color:thistle;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+}
+nav {
+    text-align: center;
+    margin-top: 6vh;
+}
+#scores {
+    text-align: center;
+    margin-bottom: 6vh;
+}
+#userScore {
+    display: inline;
+    padding-left: 6vh;
+    padding-right: 6vh;
+}
+#tieGames {
+    display: inline;
+    padding-left: 6vh;
+    padding-right: 6vh;
+}
+#computerScore {
+    display: inline;
+    padding-left: 6vh;
+    padding-right: 6vh;
+}
+
+#userChoice {
+    text-align: center;
+}
+button {
+    margin-left: 3%;
+    margin-right: 3%;
+    background-color: transparent;
+    border-radius: 2em;
+    border-color: thistle;
+    border-style: solid;
+    color: thistle;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
+}
+button:hover {
+    background-color: thistle;
+    color: #ad448a;
+}
+

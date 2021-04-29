@@ -5,5 +5,30 @@
     <link rel="stylesheet" href="styles.css" />
     <title>Rock, Paper, Scissors</title>
   </head>
-  <body></body>
+  <body>
+    <header>
+      <h1 id=title class=text>Rock, Paper, Scissors</h1>
+    </header>
+    <main>
+      <form>
+        <h2 id=name class=text>What's your name?</h2>
+        <input id=username type="text" class=text>
+      </form>
+      <nav>
+        <button id=newGameButton>New Game</button>
+      </nav>
+      <section id=scores>
+        <h2 id=scoresTitle class=text>Scores</h2>
+        <p id=userScore class=text>User: 0</p>
+        <p id=tieGames class=text>Ties: 0</p>
+        <p id=computerScore class=text>Computer: 0</p>
+      </section>
+      <section id=userChoice>
+        <button id=rockButton class=playButton>Rock</button>
+        <button id=paperButton class=playButton>Paper</button>
+        <button id=scissorsButton class=playButton>Scissors</button>
+      </section>
+    </main>
+    <script src="./main.js"></script>
+  </body>
 </html>
